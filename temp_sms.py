@@ -9,7 +9,7 @@ while True:
     print("Sensor value is: " + str(data['value']))
     try:
         sensor_value = int(data['value'])
-        if sensor_value>1024:
+        if sensor_value>1000:
             print("Making request to Twilio to send a SMS")
             response = sms.send_sms("A rise in temperature is detected ")
             print("Response received from Twilio is: " + str(response))
